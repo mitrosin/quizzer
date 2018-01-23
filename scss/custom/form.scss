@@ -1,0 +1,134 @@
+// FORM STYLES
+.form-horizontal {
+    width: 80%;
+    position: relative;
+    margin: 30px auto;
+}
+
+.form-group {
+    padding: 15px 0px 30px 0px;
+    border-bottom: solid 1px $color-gray;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.label-group {
+    label {
+        float: left;
+        display: block;
+    }
+    output {
+        float: right;
+        font-size: 1.2em;
+        color: $color-white;
+        background-color: $color-primary;
+        border-radius: $base-border-radius;
+        padding: 5px;
+        width: 40px;
+        text-align: center;
+    }
+}
+
+.control-label {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: $color-primary;
+}
+
+.main-container {
+    width: 200%;
+}
+
+.offcanvas-container {
+    width: 50%;
+    float: left;
+}
+
+.radio {
+    input {
+        display: none;
+    }
+    label {
+        margin-right: 15px;
+    }
+}
+
+
+label {
+    overflow: hidden;
+    &.image-label {
+        padding-left: 0;
+        border: solid 5px $color-white;
+        img {
+            transition: all 0.5s;
+        }
+    }
+    &.icon-label {
+        display: block;
+        span {
+            &:first-child {
+                display: block;
+                font-size: 2em;
+            }
+            &:last-child {
+                font-family: "Arial";
+            }
+        }
+    }
+    &:hover {
+        img {
+            transform: scale(1.05,1.05);
+        }
+    }
+}
+
+.icon-label-group {
+    width: 25%;
+    float: left;
+    padding: 5px;
+}
+
+input[type="radio"]:checked + label {
+    background-color: $color-secondary;
+    border-color: darken($color-secondary, 0.1);
+    color: $color-white;
+}
+
+input[type="radio"]:checked + label.image-label {
+    border-color: $color-secondary;
+}
+
+input[type="radio"] {
+    img {
+        transition: all 0.5s;
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
+
+.view-column {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media screen and (max-width: $break-medium) {
+    .label-group {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: $break-small + 150px) {
+    .icon-label-group {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: $break-small) {
+    .view-column {
+        width: 100%;
+    }
+}

@@ -1,0 +1,73 @@
+@mixin rangeTrack {
+    height: 10px;
+    background: $color-secondary;
+    border: none;
+    border-radius: $base-border-radius;
+}
+
+@mixin sliderThumb {
+    border: none;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: $color-primary;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 100%;
+    &:focus {
+        outline: none;
+        // Focus for WebKit
+        &::-webkit-slider-runnable-track {
+            background: $color-secondary;
+        }
+        // Focus for IE
+        &::-ms-fill-lower {
+            background: $color-secondary;
+        }
+        &::-ms-fill-upper {
+            background: $color-secondary;
+        }
+    }
+    // Styles for WebKit
+    &::-webkit-slider-runnable-track {
+        @include rangeTrack;
+    }
+    &::-moz-range-track {
+        @include rangeTrack;
+    }
+    &::-webkit-slider-thumb {
+        @include sliderThumb;
+        -webkit-appearance: none;
+        margin-top: -11px;
+    }
+    // Styles for Firefox
+    &::-moz-range-thumb {
+        @include sliderThumb;
+    }
+    &:-moz-focusing {
+        outline: 1px solid white;
+        outline-offset: -1px;
+    }
+    // Styles for IE
+    &::-ms-track {
+        height: 10px;
+        background: transparent;
+        border-color: transparent;
+        border-width: 6px 0;
+        color: transparent;
+    }
+    &::-ms-fill-lower {
+        background: $color-secondary;
+        border-radius: 10px;
+    }
+    &::-ms-fill-upper {
+        background: $color-secondary;
+        border-radius: 10px;
+    }
+    &::-ms-thumb {
+        @include sliderThumb;
+    }
+}

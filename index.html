@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizzer - Where you should travel this year</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+    <div class="overflow-x">
+    <!-- START - PAGE HEADER AND NAVIGATION-->
+    <header class="parallax-window" data-parallax="scroll" data-image-src="images/header-image-lg.jpg">
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="#">
+                            <img src="images/logo.png" class="img-responsive" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul>
+                            <li>
+                                <a href="#" class="js_flag flag" data-lang="en">
+                                    <img src="images/flag-en.png" class="img-responsive" alt="Flag image united kingdom">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="js_flag flag" data-lang="de">
+                                    <img src="images/flag-de.png" class="img-responsive" alt="Flag image germany">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="js_flag flag" data-lang="ro">
+                                    <img src="images/flag-ro.png" class="img-responsive" alt="Flag image romania">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-container">
+                        <h1 id="js_page-title">Where you should travel this year?</h1>
+                        <span class="underline"></span>
+                        <p id="js_page-subtitle">Find out with this fun quiz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END - PAGE HEADER AND NAVIGATION -->
+
+    <!-- START - THE MAIN PAGE CONTENT -->
+    <div class="main-container clearfix">
+        <div class="offcanvas-container" id="js_form-container">
+            <div class="container">
+                <div class="row">
+                    <form id="js_form" class="form-horizontal">
+                        <!-- Age Form Group -->
+                        <div class="form-group">
+                            <div class="col-sm-3 clearfix label-group">
+                                <label id="js_age" for="js_age-range" class="control-label">Age</label>
+                                <output for="js_age-range" id="js_age-output"></output>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="range" min="18" max="70" value="20" step="1" class="slider form-control" id="js_age-range">
+                            </div>
+                        </div>
+
+                        <!-- Personality Type Form Group -->
+                        <div class="form-group">
+                            <div class="col-sm-3 clearfix label-group">
+                                <label id="js_personality" for="personality" class="control-label">Personality</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="radio">
+
+                                    <input type="radio" name="personality1" id="personality1" value="introvert" checked>
+                                    <label id="js_personality1" class="btn btn-default btn-lg" for="personality1">Introvert</label>
+
+                                    <input type="radio" name="personality1" id="personality2" value="extrovert">
+                                    <label id="js_personality2" class="btn btn-default btn-lg" for="personality2">Extrovert</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pick your mates Form Group -->
+                        <div class="form-group">
+                            <div class="col-sm-3 clearfix label-group">
+                                <label id="js_whoTravel" class="control-label">With who you travel?</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <select class="form-control">
+                                    <option value="1" selected>Solo</option>
+                                    <option value="2">Partner</option>
+                                    <option value="3">Group</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <!-- Wake up to view Form Group -->
+                        <div class="form-group">
+                            <div class="col-sm-3 clearfix label-group">
+                                <label id="js_view" for="view" class="control-label">Wake up to view</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="radio">
+                                    <div class="view-column col-xs-6">
+                                        <input type="radio" name="view" id="view1" value="view1" checked>
+                                        <label class="image-label" for="view1">
+                                            <img src="images/view-beach.jpg" class="img-responsive" alt="Beach image">
+                                        </label>
+                                    </div>
+                                    <div class="view-column col-xs-6">
+                                        <input type="radio" name="view" id="view2" value="view2">
+                                        <label class="image-label" for="view2">
+                                            <img src="images/view-mountain.jpg" class="img-responsive" alt="Mountain image">
+                                        </label>
+                                    </div>
+                                    <div class="view-column col-xs-6">
+                                        <input type="radio" name="view" id="view3" value="view3">
+                                        <label class="image-label" for="view3">
+                                            <img src="images/view-city.jpg" class="img-responsive" alt="City image">
+                                        </label>
+                                    </div>
+                                    <div class="view-column col-xs-6">
+                                        <input type="radio" name="view" id="view4" value="view4">
+                                        <label class="image-label" for="view4">
+                                            <img src="images/view-safari.jpg" class="img-responsive" alt="Safari image">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Pick your season Form Group -->
+                        <div class="form-group">
+                            <div class="col-sm-3 clearfix label-group">
+                                <label id="js_season" for="season" class="control-label">Pick your season</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="radio clearfix">
+                                    <div class="icon-label-group">
+                                        <input type="radio" name="season" id="season1" value="summer" checked>
+                                        <label class="btn btn-default btn-lg icon-label" for="season1">
+                                            <span class="icon icon-sun" aria-hidden="true"></span>
+                                            <span id="js_season1">Summer</span>
+                                        </label>
+                                    </div>
+                                    <div class="icon-label-group">
+                                        <input type="radio" name="season" id="season2" value="winter">
+                                        <label class="btn btn-default btn-lg icon-label" for="season2">
+                                            <span class="icon icon-snow" aria-hidden="true"></span>
+                                            <span id="js_season2">Winter</span>
+                                        </label>
+                                    </div>
+                                    <div class="icon-label-group">
+                                        <input type="radio" name="season" id="season3" value="spring">
+                                        <label class="btn btn-default btn-lg icon-label" for="season3">
+                                            <span class="icon icon-cloud-sun" aria-hidden="true"></span>
+                                            <span id="js_season3">Spring</span>
+                                        </label>
+                                    </div>
+                                    <div class="icon-label-group">
+                                        <input type="radio" name="season" id="season4" value="autumn">
+                                        <label class="btn btn-default btn-lg icon-label" for="season4">
+                                            <span class="icon icon-rain" aria-hidden="true"></span>
+                                            <span id="js_season4">Autumn</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="form-submit">
+                            <div class="col-sm-12">
+                                <button id="js_submit" class="btn btn-primary btn-lg">Show dream trip</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- END - THE MAIN PAGE CONTENT -->
+
+
+        <!-- START THE RESULT PAGE -->
+        <div id="js_result-container" class="offcanvas-container">
+            <div class="container">
+                <div id="js_result-view1" class="result-view">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img src="images/travel-maldives.jpg" class="img-responsive" alt="Maldives image">
+                        </div>
+                        <div class="col-sm-7">
+                            <h3 id="js_travel-title-1">You should go to the Maldives</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h4 class="js_share-title share-title">Share with your friends</h4>
+                            <button class="btn btn-facebook"><span class="icon-facebook" aria-hidden="true"></span>Post on Facebook</button>
+                            <button class="btn btn-twitter"><span class="icon-twitter" aria-hidden="true"></span>Post on Twitter</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="js_result-view2" class="result-view">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img src="images/travel-alps.jpg" class="img-responsive" alt="Alps image">
+                        </div>
+                        <div class="col-sm-7">
+                            <h3 id="js_travel-title-2">You should go to the Alps</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h4 class="js_share-title share-title">Share with your friends</h4>
+                            <button class="btn btn-facebook"><span class="icon-facebook" aria-hidden="true"></span>Post on Facebook</button>
+                            <button class="btn btn-twitter"><span class="icon-twitter" aria-hidden="true"></span>Post on Twitter</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="js_result-view3" class="result-view">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img src="images/travel-new-york.jpg" class="img-responsive" alt="New York image">
+                        </div>
+                        <div class="col-sm-7">
+                            <h3 id="js_travel-title-3">You should go to New York</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h4 class="js_share-title share-title">Share with your friends</h4>
+                            <button class="btn btn-facebook"><span class="icon-facebook" aria-hidden="true"></span>Post on Facebook</button>
+                            <button class="btn btn-twitter"><span class="icon-twitter" aria-hidden="true"></span>Post on Twitter</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="js_result-view4" class="result-view">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img src="images/travel-south-africa.jpg" class="img-responsive" alt="South Africa image">
+                        </div>
+                        <div class="col-sm-7">
+                            <h3 id="js_travel-title-4">You should go to South Africa</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h4 class="js_share-title share-title">Share with your friends</h4>
+                            <button class="btn btn-facebook"><span class="icon-facebook" aria-hidden="true"></span>Post on Facebook</button>
+                            <button class="btn btn-twitter"><span class="icon-twitter" aria-hidden="true"></span>Post on Twitter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-submit">
+                            <button id="js_reload" class="btn btn-primary btn-lg">Reload quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END THE RESULT PAGE -->
+
+    </div>
+    <!-- START - PAGE FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="small">Quiz powered by</p>
+                    <img src="images/logo.png" alt="Logo white" class="img-responsive">
+                    <h2>Quizzer is an example one-page project</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END - PAGE FOOTER -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

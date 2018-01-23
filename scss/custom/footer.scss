@@ -1,0 +1,17 @@
+// PAGE FGOOTER
+footer {
+    background-color: $color-primary;
+    color: $color-white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+    text-align: center;
+    img {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+}
